@@ -1,8 +1,15 @@
 # airtrack
 logging air tag locations
 
-## Notes
-This only works for OSX Big Sur and up.
+## Prerequisites
+* Apple Airtags (or OpenHaystack?).
+* iOS device 14.5 and up.
+* OSX device Big Sur and up.
+* Xcode commandline tools
+* Homebrew
+* jq (brew install jq)
+
+You need to give Terminal and /bin/bash full disk access in order for this to work (Preferences > Security and Privacy > Full disk access)
 
 ## Config
 Change the YOURUSERNAME to your user name... and edit the name/id of you Airtag
