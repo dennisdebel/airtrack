@@ -10,7 +10,7 @@ logging air tag locations
 * jq (brew install jq)
 
 ## Permissions
-You need to give Terminal, '/bin/bash' anf '/usr/local/bin/jq' (these are path names) full disk access in order for this to work (Preferences > Security and Privacy > Full disk access)
+You need to give Terminal, '/bin/bash', '/usr/local/bin/jq' and '/usr/sbin/cron' full disk access in order for this to work (Preferences > Security and Privacy > Full disk access)
 
 After this is setup, pair the airtag with your ios device and it should sync with the Findmy.app on your OSX device. We then use the track.sh script to extract the Unix Epoch timestamp and Longitude and Latitude of the airtag from the findmy.app database located on your OSX device.
 
