@@ -21,6 +21,13 @@ It is suggested that you copy the script 'track.sh' and 'log.txt' to your users'
 mkdir ~/Library/scripts/
 ```
 
+You still need to make both 'track.sh' and 'log.txt' read/write/execute by all means necessary. So: 
+
+```
+cd ~/Library/scripts/
+chmod a+rwx *
+```
+
 ## Config
 Change the AIRTAGNAME to match the name you gave to your airtag (yes, if you pair one, scroll to the bottom of the suggested  name list and you will be able to add a custom name and emoji). Also change YOURUSERNAME to... your computer accounts user name...in 'track.sh'
 
