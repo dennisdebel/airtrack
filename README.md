@@ -31,6 +31,14 @@ chmod a+rwx *
 ## Config
 Change the AIRTAGNAME to match the name you gave to your airtag (yes, if you pair one, scroll to the bottom of the suggested  name list and you will be able to add a custom name and emoji). Also change YOURUSERNAME to... your computer accounts user name...in 'track.sh'
 
+## Tracking Multiple Airtags
+This script is very basic, a blunt way to track multiple targets is to add the following to `script.sh`. Don't forget to edit SECONDAIRTAGNAME, log-SECONDAIRTAGNAME.txt and YOURUSERNAME variables.
+
+```
+sleep 2; 
+/usr/local/bin/jq -r '.[] | select(.name == "SECONDAIRTAGNAME") | .location | "\(.latitude) \(.longitude) \(.timeStamp)"' /Users/YOURUSERNAME/Library/Caches/com.apple.findmy.fmipcore/Items.data >> /Users/YOURUSERNAME/Library/Scripts/log-SECONDAIRTAGNAME.txt
+```
+
 ## Add to crontab
 To log every hour + have a error log add this line to the contrab window (VIM editor):
 
@@ -45,3 +53,7 @@ $ crontab -e
 ```
 
 Type 'i' to enter insert mode, paste the line above, press escape and type ':' followed by 'wq' and press enter to save the crontab job. Crontab will start the job or mention if there is any syntax errors in your line. If there are errors in the trash.sh script, these will be logged at /tmp/cronlogfile.txt
+
+## Improvents
+* Auto format log as geojson...or other 'gis' inspired formats...bweh...
+
