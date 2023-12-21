@@ -10,7 +10,7 @@ logging air tag locations
 * jq (brew install jq)
 
 ## Permissions
-You need to give Terminal, '/bin/bash', '/usr/local/bin/jq' and '/usr/sbin/cron' full disk access in order for this to work (Preferences > Security and Privacy > Full disk access)
+You need to give 'Terminal', '/bin/bash', '/usr/local/bin/jq' and '/usr/sbin/cron' full disk access in order for this to work (Preferences > Security and Privacy > Full disk access)
 
 After this is setup, pair the airtag with your ios device and it should sync with the Findmy.app on your OSX device. We then use the track.sh script to extract the Unix Epoch timestamp and Longitude and Latitude of the airtag from the findmy.app database located on your OSX device.
 
@@ -29,7 +29,7 @@ chmod a+rwx *
 ```
 
 ## Config
-Change the AIRTAGNAME to match the name you gave to your airtag (yes, if you pair one, scroll to the bottom of the suggested  name list and you will be able to add a custom name and emoji). Also change YOURUSERNAME to... your computer accounts user name...in 'track.sh'
+In 'track.sh' Change the AIRTAGNAME to match the name you gave to your airtag (yes, if you pair one, scroll to the bottom of the suggested  name list and you will be able to add a custom name).
 
 ## Tracking Multiple Airtags
 This script is very basic, a blunt way to track multiple targets is to add the following to `script.sh`. Don't forget to edit SECONDAIRTAGNAME, log-SECONDAIRTAGNAME.txt and YOURUSERNAME variables.
