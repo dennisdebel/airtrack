@@ -57,3 +57,10 @@ Type 'i' to enter insert mode, paste the line above, press escape and type ':' f
 ## Improvents
 * Auto format log as geojson...or other 'gis' inspired formats...bweh...
 
+## Use cases
+Tracking e-waste using airtags: http://dennisdebel.nl/trashtag/
+It is debatable if it's a good idea to track e-waste by actively contributing to the same problem you are trying to address. Why not just talk to the recyclers?
+
+## Similar projects
+https://senseable.mit.edu/trashtrack/
+
